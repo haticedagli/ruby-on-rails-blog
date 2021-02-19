@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div style="display:flex;">
+      <img class="logo" src="https://www.infigic.com/res/ruby-on-rails-logo.png" alt="Ruby On Rails">
+      <div class="center" style="margin-left:25%">
+        <div class="button">
+          <%= link_to "Home", root_path %>
+        </div>
+        <div class="button">
+          <%= link_to "New Post", new_post_path %>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<div class="deneme">
+
+    <div class="title"><h1><%= @post.title %></h1></div>
+
+    <div class= "post-body"> 
+        <%= @post.body %>
+    </div>
+
+  <div class= "edit-button">  <%= link_to "Edit Post", edit_post_path(@post) %> </div>
+
+   <div class="edit-button"> <%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %> </div>
+
+</div>
